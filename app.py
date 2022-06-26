@@ -3,7 +3,7 @@ from flaskext.mysql import MySQL
 import pymysql
 import pickle
 import re
-
+ 
 
 
 vector = pickle.load(open("vectorizer.pkl", 'rb'))
@@ -185,5 +185,6 @@ def profile():
 
 if __name__ == '__main__':
     
-    app.run(host="localhost", port=8000, debug=True)
+    app.debug = True
+    app.run()
     
